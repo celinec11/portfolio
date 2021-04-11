@@ -89,7 +89,8 @@ header{
 
 .gallery > img{
   margin: 8px;
-  width: 400px;
+  width: 250px;
+  height:auto;
 }
 
 .resume{
