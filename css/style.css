@@ -90,13 +90,12 @@ header{
 .gallery > img{
   margin: 8px;
   vertical-align: middle;
-  max-width: 400px;
+  max-width: 230px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .resume{
-  /*Your Code Here*/
   margin: 20px;
 
 }
@@ -105,21 +104,28 @@ header{
 
 @media screen and (min-width: 850px){
 
-  /*Requirement 10*/
-  header{
-    /*Your code here again.*/  
+
+  header{ 
     display: flex; 
     flex-direction: row; 
     justify-content: space-between ;
     
   }
 
-  /*Requirement 10*/
+
   .nav_links{
     /*Your code here again.*/  
     display: flex; 
     flex-direction: row; 
     
+  }
+    .gallery > img{
+    margin: 8px;
+    vertical-align: middle;
+    max-width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 
