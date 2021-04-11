@@ -4,7 +4,6 @@ body{
   padding: 0;
   font-size: 16pt; 
   font-family: "Raleway", sans-serif;
-  background-image: url("../../hw6-2021/images/concrete_seamless.png") ;
 
 }
 
@@ -46,7 +45,6 @@ header{
 .project1, .project2, .project3{
   /*Your Code Here*/
   margin: 12px;
-  background: #fff;
   border-radius: 7px;
   padding: 0 0 50px 0;
   display: grid;
@@ -59,20 +57,28 @@ header{
   display: grid;
   grid-row: 1 / span 1;
 }
+.project1 > img{
+  width: 100%;
+}
 .project2 {
   display: grid;
   grid-row: 2 / span 1;
+}
+.project2 > img{
+  width: 100%;
 }
 .project3 {
   display: grid;
   grid-row: 3 / span 1;
 }
+.project3 > img{
+  width: 100%;
+}
 
 
-/*Requirement 7*/
+
 .gallery{
-  min-height: 700px;
-  /*Your code here again.*/
+  min-height: 600px;
   display: flex; 
   flex-direction: row; 
   flex-wrap: wrap;
@@ -82,13 +88,18 @@ header{
 
 
 .gallery > img{
-  border: 5px #FFc30b solid;
-  margin: 10px;
-  width: 300px;
-  height: auto;
+  margin: 8px;
+  vertical-align: middle;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.resume{
+  /*Your Code Here*/
+  margin: 20px;
 
+}
 
 
 
@@ -109,8 +120,8 @@ header{
     display: flex; 
     flex-direction: row; 
     
-    
   }
+
 
 }
 
