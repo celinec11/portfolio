@@ -90,7 +90,7 @@ header{
 .gallery > img{
   margin: 8px;
   vertical-align: middle;
-  max-width: 400px;
+  width: 400px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
