@@ -29,7 +29,6 @@ body{
 
 
 header{
-  background: #fff;
   border-bottom: 3px solid #FFc30b ;
 
   display: flex; 
@@ -67,7 +66,7 @@ header{
 a.skip{
   background: white;
   left: 0;
-  padding: 6px;
+  /*padding: 6px;*/
   position: absolute;
   top: -40px;
   -webkit-transition: top 1s ease-out;
@@ -133,22 +132,17 @@ footer{
 
 
 .gallery{
-  min-height: 600px;
-  display: flex; 
-  flex-direction: row; 
-  flex-wrap: wrap;
-  justify-content: center; 
-
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
 }
 
 
 .gallery > img{
-  margin: 8px;
-  vertical-align: middle;
-  max-width: 100%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  height: 100%; 
+  width: 100%; 
+  object-fit: cover;
 }
 
 .resume{
@@ -176,13 +170,14 @@ form{
 }
 
 .form-control{
-  width: 600px; 
+  width: 50%; 
   background: transparent;
   border: none; 
   outline:none;
   border-bottom: 1px solid gray; 
   font-size: 18px;
   margin-bottom: 16px; 
+  box-align: center;
 
 }
 
@@ -219,7 +214,7 @@ form .submit:hover{
 
 
   /*animation*/
-    h1{
+    #title{
       animation-name: title-show; 
       animation-duration: 15s;
       animation-iteration-count: 1 ;
@@ -247,43 +242,15 @@ form .submit:hover{
     background-size: cover;
   } 
 
-}
-
-/*laptop view*/
-@media (min-width: 1200px){
-
-
-  header{
-    /*Your code here again.*/  
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-between ;
-    
+  /*gallery*/
+  .gallery{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
   }
 
-  /*Requirement 10*/
-  .nav_links{
-
-    display: flex; 
-    flex-direction: row; 
-
-    
-  }
-
-  .nav_item a{
-    padding: 10px;
-  }
-
-  .gallery > img{
-    margin: 8px;
-    vertical-align: middle;
-    max-width: 400px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /*flip card*/
+    /*flip card*/
 .flip-card {
   background-color: transparent;
   width: 350px;
@@ -338,6 +305,42 @@ form .submit:hover{
   transform: rotateY(180deg);
   -webkit-transform: rotateY(-180deg);
 }
+
+
+
+}
+
+/*laptop view*/
+@media (min-width: 1200px){
+
+
+  header{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between ;
+    
+  }
+
+  .nav_links{
+
+    display: flex; 
+    flex-direction: row; 
+
+    
+  }
+
+  .nav_item a{
+    padding: 10px;
+  }
+
+
+  .gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    justify-content: center;
+    align-content: center;
+  }
 
 
 }
