@@ -29,7 +29,6 @@ body{
 
 
 header{
-  background: #fff;
   border-bottom: 3px solid #FFc30b ;
 
   display: flex; 
@@ -67,7 +66,7 @@ header{
 a.skip{
   background: white;
   left: 0;
-  padding: 6px;
+  /*padding: 6px;*/
   position: absolute;
   top: -40px;
   -webkit-transition: top 1s ease-out;
@@ -144,6 +143,11 @@ footer{
   height: 100%; 
   width: 100%; 
   object-fit: cover;
+  filter: opacity(85%);
+}
+
+.gallery > img:hover{
+  border: 3px solid #FFc30b ;
 }
 
 .resume{
@@ -171,13 +175,14 @@ form{
 }
 
 .form-control{
-  width: 100%; 
+  width: 50%; 
   background: transparent;
   border: none; 
   outline:none;
   border-bottom: 1px solid gray; 
   font-size: 18px;
   margin-bottom: 16px; 
+  box-align: center;
 
 }
 
@@ -207,10 +212,19 @@ form .submit:hover{
 
 }
 
-@media screen and (prefers-reduced-motion: reduce) { }
 
 /*tablet view*/
 @media (min-width: 768px){
+
+
+  /*nav links*/
+  .nav_links{
+    display: flex; 
+    flex-direction: row; 
+  }
+  .nav_item a{
+    padding: 10px;
+  }
 
 
   /*animation*/
@@ -250,43 +264,7 @@ form .submit:hover{
     grid-template-rows: auto auto auto;
   }
 
-}
-
-/*laptop view*/
-@media (min-width: 1200px){
-
-
-  header{
-    /*Your code here again.*/  
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-between ;
-    
-  }
-
-  /*Requirement 10*/
-  .nav_links{
-
-    display: flex; 
-    flex-direction: row; 
-
-    
-  }
-
-  .nav_item a{
-    padding: 10px;
-  }
-
-
-  .gallery{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto auto auto;
-    justify-content: center;
-    align-content: center;
-  }
-
-  /*flip card*/
+    /*flip card*/
 .flip-card {
   background-color: transparent;
   width: 350px;
@@ -341,6 +319,70 @@ form .submit:hover{
   transform: rotateY(180deg);
   -webkit-transform: rotateY(-180deg);
 }
+
+
+
+}
+
+@media screen and (prefers-reduced-motion: reduce) { 
+  #title{
+    animation: none;
+  }
+
+  .content-start {
+    height: 100%;  
+  }
+
+  .parallax{
+    background: url('../../portfolio/images/me.jpg');
+    height: 500px;
+    width: auto;
+    background-position: center ; 
+    background-size: cover;
+  }
+
+  .flip-card:focus .flip-card-inner {
+    transform: none;
+      
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+
+
+}
+
+/*laptop view*/
+@media (min-width: 1200px){
+
+
+  header{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between ;
+    
+  }
+
+  .nav_links{
+
+    display: flex; 
+    flex-direction: row; 
+
+    
+  }
+
+  .nav_item a{
+    padding: 10px;
+  }
+
+
+  .gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    justify-content: center;
+    align-content: center;
+  }
 
 
 }
