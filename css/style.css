@@ -143,7 +143,9 @@ footer{
   height: 100%; 
   width: 100%; 
   object-fit: cover;
+  filter: opacity(85%);
 }
+
 
 .resume{
   margin: 20px;
@@ -207,10 +209,19 @@ form .submit:hover{
 
 }
 
-@media screen and (prefers-reduced-motion: reduce) { }
 
 /*tablet view*/
 @media (min-width: 768px){
+
+
+  /*nav links*/
+  .nav_links{
+    display: flex; 
+    flex-direction: row; 
+  }
+  .nav_item a{
+    padding: 10px;
+  }
 
 
   /*animation*/
@@ -310,6 +321,38 @@ form .submit:hover{
 
 }
 
+@media screen and (prefers-reduced-motion: reduce) { 
+  #title{
+    animation: none;
+  }
+
+  .content-start {
+    height: 100%;  
+  }
+
+  .parallax{
+    background: url('../../portfolio/images/me.jpg');
+    height: 500px;
+    width: auto;
+    background-position: center ; 
+    background-size: cover;
+  }
+
+  .flip-card:focus .flip-card-inner {
+    transform: none;
+      
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+
+  .gallery > img:hover{
+    border: none;
+  }
+
+
+}
+
 /*laptop view*/
 @media (min-width: 1200px){
 
@@ -340,6 +383,10 @@ form .submit:hover{
     grid-template-rows: auto auto auto auto auto auto auto;
     justify-content: center;
     align-content: center;
+  }
+
+  .gallery > img:hover{
+    border: 3px solid #FFc30b ;
   }
 
 
