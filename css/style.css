@@ -238,7 +238,7 @@ form .submit:hover{
     }
 
   /*parallax*/
-  .content-start {
+  #content-start {
     height: 100%; 
     
   }
@@ -326,7 +326,7 @@ form .submit:hover{
     animation: none;
   }
 
-  .content-start {
+  #content-start {
     height: 100%;  
   }
 
